@@ -42,7 +42,11 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props
 
-    const config = { apiKey: API_KEY, shopOrigin, forceRedirect: true }
+    const config = {
+      apiKey: "d478640e734138f8c80b80e691caba6b",
+      shopOrigin,
+      forceRedirect: true,
+    }
     return (
       <React.Fragment>
         <Head>

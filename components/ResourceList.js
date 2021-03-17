@@ -57,7 +57,10 @@ const ResourceListWithProducts = () => {
 
     const redirect = Redirect.create(app)
     console.log("redirect->", redirect)
-    redirect.dispatch(Redirect.Action.APP, "/edit-products")
+    redirect.dispatch(Redirect.Action.APP, {
+      path: "/edit-products",
+      newContext: true,
+    })
   }
   return (
     <Card>

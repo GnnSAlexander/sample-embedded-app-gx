@@ -41,7 +41,7 @@ class MyProvider extends React.Component {
 class MyApp extends App {
   render() {
     const { Component, pageProps, shopOrigin } = this.props
-
+    console.log(process.env, process.env.API_KEY)
     const config = {
       apiKey: "d478640e734138f8c80b80e691caba6b",
       shopOrigin,

@@ -53,7 +53,10 @@ const ResourceListWithProducts = () => {
   if (error) return <p>Error :(</p>
 
   const redirectToProduct = () => {
+    console.log("App ->", app)
+
     const redirect = Redirect.create(app)
+    console.log("redirect->", redirect)
     redirect.dispatch(Redirect.Action.APP, "/edit-products")
   }
   return (
@@ -83,7 +86,7 @@ const ResourceListWithProducts = () => {
               accessibilityLabel={`View details for ${item.title}`}
               onClick={() => {
                 store.set("item", item)
-                redirectToProduct
+                redirectToProduct()
               }}
             >
               <Stack>
